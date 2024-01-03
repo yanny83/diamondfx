@@ -1,1 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+  <title>DiamondtradeFX || Trade with assured RIO </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="../diamond_assets/diamond_fav.png" type="image/x-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin - v2.2.2
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+  <!-- my button styling -->
+
+  <link rel="stylesheet" type="text/css" href="button_style.css">
+
+  <!-- My modal styling -->
+
+  <link rel="stylesheet" type="text/css" href="my_modal.css">
+
+  <style type="text/css">
+    .warning{
+      height: 10px;
+      width: 10px;
+      background: red;
+      border-radius: 50%;
+      animation-name: warn;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      margin-right: 20px;
+    }
+    @keyframes warn{
+      from{
+        outline: 0px solid red;
+      }to{
+        outline: 10px solid rgba(100, 0, 0, 0.5);
+      }
+    }
+
+  </style>
+
+  <style type="text/css">
+      .grower_anim{
+        height: 15px;
+        width: 15px;
+        background: blue;
+        border-radius: 10px;
+        animation-name: anim;
+        animation-duration: 0.8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        position: absolute;
+        margin-left: 20px;
+      }
+      @keyframes anim{
+        from{outline: 1px solid rgba(0, 0, 100, 0.7);}
+        to{outline: 10px solid rgba(0, 0, 255, 0.7);}
+      }
+
+      
+    </style>
+
+    <style type="text/css">
+      /* Preloader styles */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Loading animation styles */
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+    </style>
+
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script src="../sweetalert2.all.min.js"></script>
+
+  
+</head>
+
+<body>
+
+  <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index" class="logo d-flex align-items-center">
+        <img src="../diamond_assets/diamond_logo.png" style="height: 100px; width: 180px!important;" alt="" data-uk-img>
+        
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div>
+      <a href="mailto:help@diamondtradefx.com" class="deposit_btn"><i class="bi bi-chat-dots"></i></a>
+      
+    </div>
+
+
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        
+
+        
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+      <div id="google_translate_element"></div>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="index">
+          <i class="bi bi-house-fill"></i>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="deposit">
+          <i class="bi bi-arrow-bar-up"></i>
+          <span>Deposit</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="invest.php">
+          <i class="bi bi-arrow-bar-up"></i>
+          <span>Trade</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="withdraw">
+          <i class="bi bi-arrow-bar-down"></i>
+          <span>Withdraw</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="reinvest.php">
+          <i class="bi bi-arrow-clockwise"></i>
+          <span>retrade</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+      
+      
+      
+
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-book-half"></i></i><span>Transaction history</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <!-- <li>
+            <a href="all_transaction">
+              <i class="bi bi-circle"></i><span>All transaction</span>
+            </a>
+          </li> -->
+          <li>
+            <a href="all_orders">
+              <i class="bi bi-circle"></i><span>active deposit orders</span>
+            </a>
+          </li>
+          <li>
+            <a href="deposit_transaction">
+              <i class="bi bi-circle"></i><span>Deposits</span>
+            </a>
+          </li>
+          <li>
+            <a href="withdraw_transaction">
+              <i class="bi bi-circle"></i><span>Withdraw</span>
+            </a>
+          </li>
+          
+          
+          
+          
+        </ul>
+      </li><!-- End Components Nav -->
+
+    
+
+      <!-- <li class="nav-item">
+        <a class="nav-link collapsed" href="bonus">
+          <i class="bi bi-gift"></i>
+          <span>Bonuses</span>
+        </a>
+      </li> -->
+      
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="profile">
+          <i class="bi bi-person"></i>
+          <span>Profile</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="referral">
+          <i class="bi bi-people-fill"></i>
+          <span>Referral</span>
+        </a>
+      </li><!-- End Contact Page Nav -->
+      
+
+     
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="mailto:help@diamondtradefx.com">
+          <i class="bi bi-chat-dots"></i>
+          <span>Get support</span>
+        </a>
+      </li><!-- End Contact Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="logout">
+          <i class="bi bi-box-arrow-right"></i>
+          <span>Logout</span>
+        </a>
+      </li><!-- End Register Page Nav -->
+
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h5 id="hide" class="alert alert-primary">Welcome Neiked Blessings <button onclick="func()" style="border: none; float: right;">X</button></h5>
+      
+    </div><!-- End Page Title -->
+
+    
+        
+    <section class="section dashboard">
+      <div class="row">
+
+        <!-- Left side columns -->
+        <div class="col-lg-7">
+          <div class="row">
+
+            
+
+            <!-- Revenue Card -->
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card revenue-card">
+                <div class="card-body">
+                  <h5 class="card-title"><small>Wallet balance </small></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-bag-check-fill" style="font-size: 30px; color: #1A73E9; "></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>$0</h6>                      
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End Revenue Card -->
+
+            
+
+            <!-- Revenue Card -->
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card revenue-card">
+                <div class="card-body">
+                  <h5 class="card-title"><small>Running investment <span class="grower_anim"></span> </small></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-gem" style="font-size: 30px; color: #1A73E9;"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>$0 </h6>                     
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End Revenue Card -->
+
+            <!-- Revenue Card -->
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card revenue-card">
+                <div class="card-body">
+                  <h5 class="card-title"><small>Total withdrawal </small></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-wallet2" style="font-size: 30px; color: #1A73E9; "></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>$0</h6>                      
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End Revenue Card -->
+
+            <!-- Revenue Card -->
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card revenue-card">
+                <div class="card-body">
+                  <h5 class="card-title"><small>Deposit </small></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-wallet-fill" style="font-size: 30px; color: #1A73E9;"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>0</h6>                      
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End Revenue Card -->
+            <!-- Revenue Card -->
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card revenue-card">
+                <div class="card-body">
+                  <h5 class="card-title"><small>Withdrawals </small></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-box-arrow-in-left" style="font-size: 30px; color: #1A73E9;"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>0</h6>                      
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End Revenue Card -->
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card revenue-card">
+                <div class="card-body">
+                  <h5 class="card-title"><small>Referral earnings </small></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-person-plus" style="font-size: 30px; color: #1A73E9; "></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>$0</h6>                      
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End Revenue Card -->
+            <!-- Revenue Card -->
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card revenue-card">
+                <div class="card-body">
+                  <h5 class="card-title"><small>Total deposit </small></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-wallet" style="font-size: 30px; color: #1A73E9; "></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>$0</h6>                      
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End Revenue Card -->
+
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card revenue-card">
+                <div class="card-body">
+                  <h5 class="card-title"><small>Referrals </small></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-hourglass-bottom" style="font-size: 30px; color: #1A73E9; "></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>0</h6>                      
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End Revenue Card -->
+
+
+
+             
+             
+            <!-- Revenue Card -->
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card revenue-card">
+                <div class="card-body">
+                  <h5 class="card-title"><small>Pending investment </small></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-hourglass-split" style="font-size: 30px; color: #1A73E9; "></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>$0</h6>                      
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End Revenue Card -->
+            <!-- Revenue Card -->
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card revenue-card">
+                <div class="card-body">
+                  <h5 class="card-title"><small>Trading margin/commission </small></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-gift" style="font-size: 30px; color: #1A73E9; "></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>$0</h6>                      
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End Revenue Card -->
+            
+
+            <!-- Customers Card -->
+            <div class="col-xxl-4 col-xl-12 mb-5">
+
+              <a href="deposit.php">
+                <button class="deposit_btn"><i class="bi bi-arrow-bar-up"></i> Deposit</button>
+              </a>
+              <a href="withdraw">
+                <button class="withdraw_btn"><i class="bi bi-arrow-bar-down"></i> Withdraw</button>
+              </a>
+              <a href="transfer">
+                <button class="transfer_btn"><i class="bi bi-arrow-bar-right"></i> Transfer</button>
+              </a>
+
+            </div><!-- End Customers Card -->
+
+            
+
+            
+            
+
+          </div>
+        </div><!-- End Left side columns -->
+
+        <!-- Right side columns -->
+        <div class="col-lg-5">
+
+          <!-- Recent Activity -->
+          <div class="card">
+            
+
+            <div class="card-body" style="text-align: center;">
+              <h5 class="card-title">Invite your friends</h5>
+
+              <small style="font-size: 13px">Earn more when you refer your friends to invest with us. The reward on our referral program is dependent on the deposit plans.</small><br>
+              
+              
+              
+              
+
+              <!-- Referral link -->
+              <form>
+                <small>Your referral link</small>
+                <input type="text" id="input" class="input mb-3" value="diamondtradefx.com/register.php?ref=Neiked Blessings" readonly>
+                <button type="button"  onclick="myFunction()" class="form-control bg-primary text-white">Copy</button>
+              </form>
+
+            </div>
+          </div><!-- End Recent Activity -->
+        </div><!-- End Right side columns -->
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- Javascript code for hiding welcome note -->
+
+  <script type="text/javascript">
+    let hide = document.getElementById('hide');
+
+    function func(){
+      hide.style.display='none';
+    }
+  </script>
+
+  <!-- Javascript code for copying referral link -->
+
+  <script type="text/javascript">
+    function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("input");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+   /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
+}
+  </script>
+
+  
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright 2020 <strong><span>DiamondtradeFX</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.min.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    window.addEventListener('load', function () {
+        // Hide the preloader when the page is fully loaded
+        const preloader = document.querySelector('.preloader');
+        preloader.style.display = 'none';
+    });
+</script>
+
+  <script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+<!-- Facebook share javascript code -->
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v14.0" nonce="sO0RrADf"></script>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/64c7f54294cf5d49dc6795b7/1h6mhc3d1';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+  
+</body>
+</html>
